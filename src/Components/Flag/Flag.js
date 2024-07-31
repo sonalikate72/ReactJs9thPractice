@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import React, { useState } from 'react'
 
 
@@ -16,7 +17,7 @@ const Flag = () => {
         setIsonline(false);
     }
     const getButton = (handler,buttonName) =>{
-        return <button onClick={handler}>{buttonName}</button>
+        return <Button variant="contained" onClick={handler}>{buttonName}</Button>
     }
   return (
     <div>

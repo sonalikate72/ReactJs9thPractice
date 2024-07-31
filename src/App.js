@@ -17,7 +17,7 @@ function App() {
   const [name,setName]=useState("Shlok")
   return (
     <div className="App">
-      <div className='header'>App Navigation</div>
+      <div className='header'>React Navigation</div>
       <div className='container-body'>
         <div className='sidebar'>
         <Link className='link' to={"/counter"}>Counter</Link><br/><br/>

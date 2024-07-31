@@ -6,9 +6,8 @@ export function ContextExample() {
   const [theme, setTheme] = useState("Light");
   return (
     <div>
-      parent Componenet:{theme}
-      <br />
-      <br />
+      <h3>Parent Componenet:{theme}</h3>
+
       <MyContext.Provider value={theme}>
         <ChildComponet />
       </MyContext.Provider>
@@ -30,10 +29,10 @@ export function ContextExample() {
 }
 
 function ChildComponet() {
+  // const theme = useContext(MyContext);
   return (
     <div>
-      Child:
-      <br />
+      <h3>Child:</h3>
       <br />
       <GarandChildComponete />
     </div>
@@ -42,5 +41,9 @@ function ChildComponet() {
 
 function GarandChildComponete() {
   const theme = useContext(MyContext);
-  return <div>GrandChild:{theme}</div>;
+  return (
+    <div>
+      <h3>GrandChild:{theme}</h3>
+    </div>
+  );
 }
