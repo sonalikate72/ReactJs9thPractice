@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+}
+
+.header{
+  background-color: rgb(231, 216, 116);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-body{
+  display: flex;
+
+}
+.sidebar{
+  width: 160px;
+  background-color: rgb(32, 133, 177);
+  height: 100vh;
+  padding-top: 30px;
+}
+.link{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.content{
+  margin: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+

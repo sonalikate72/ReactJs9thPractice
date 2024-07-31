@@ -1,0 +1,43 @@
+.user-crud-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+table ,th, td{
+    border: 1px solid #000;
+    border-collapse: collapse;
+
+}
+th ,td{
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+.btn-update{
+    background-color: rgb(46, 146, 176);
+    color: white;
+    padding: 10px;
+}
+.btn-delete{
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+}
+form{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+}
+input{
+    width: 200px;
+}
+.btn-add{
+background-color: rgb(60, 0, 255);
+padding: 10px;
+color: #fff;
+}
