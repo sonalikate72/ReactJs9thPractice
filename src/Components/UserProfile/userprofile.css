@@ -1,0 +1,9 @@
+.users-list{
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid gray;
+    background-color: limegreen;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}

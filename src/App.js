@@ -11,6 +11,9 @@ import { ContextExample } from './Components/Context/ContextExample';
 import UseEffectExample from './Components/UseEffect/UseEffectExample';
 import { useState } from 'react';
 import { Button } from '@mui/material';
+import TodoList from './Components/Todos/TodoList';
+import UserProfile from './Components/UserProfile/UserProfile';
+import UserList from './Components/UserProfile/UserList';
 
 
 function App() {
@@ -21,11 +24,13 @@ function App() {
       <div className='container-body'>
         <div className='sidebar'>
         <Link className='link' to={"/counter"}>Counter</Link><br/><br/>
+        <Link className='link' to={"/todoslist"}>Todos List</Link><br/><br/>
         <Link className='link' to={"/tic-tac-toe"}>Tic-Tac Game</Link><br/><br/>
         <Link className='link' to={"/usercrud/list"}>Users Crud</Link><br/><br/>
         <Link className='link' to={"/flag"}>Flag</Link><br/><br/>
         <Link className='link' to={"/context"}>Context Example</Link><br/><br/>
         <Link className='link' to={"/useeffect"}>UseEffect</Link><br/><br/>
+        <Link className='link' to={"/userlist"}>User Profile</Link><br/><br/>
 
         {/* <Link className='link' to={"/imagecaresoul"}>Image Caresoul</Link> */}
 
@@ -33,12 +38,14 @@ function App() {
         <div className='content'>
           <Routes>
             <Route path='/counter' element={<Counter/>}></Route>
+            <Route path='/todoslist' element={<TodoList/>}></Route>
             <Route path='/tic-tac-toe' element={<TicTacToe/>}></Route>
             <Route path='/usercrud/*' element={<UserCrudWrapper/>}></Route>
             <Route path='/flag' element={<Flag/>}></Route>
             <Route path='/imagecaresoul' element={<ImageCaresoul/>}></Route>
             <Route path='/context' element={<ContextExample/>}></Route>
             <Route path='/useeffect' element={<UseEffectExample/>}></Route>
+            <Route path='/userlist' element={<UserList/>}></Route>
             <Route path='*' element={<div>This Url is not matched</div>}></Route>
           </Routes>
         </div>

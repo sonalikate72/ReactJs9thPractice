@@ -1,21 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react';
+import './userprofile.css';
 
-const UserProfile = () => {
-    const user={
-        firstName:"Sonali",
-        LastName:"Kate",
-        Age:2,
-        isAdult:true,
-        Gender:"Female",
-        Address:"Islampur"
-    }
-  return (
-    <div>
-        <h1>UserProfile</h1>
-        <p> Name:{user.firstName} {user.LastName} </p>
-        <p>Age:{user.Age}</p>
-      { user.isAdult && <p>Gender:{user.Gender}</p>}
-        <p>IsAdult:{user.isAdult ? <p>I Am Admin</p>:<p>I am Not Admin</p>}</p>
+const UserProfile = (user) => {
+    // const user={
+    //     firstName:"Sonali",
+    //     LastName:"Kate",
+    //     Age:25,
+    //     isAdmin:true,
+    //     Gender:"Female",
+    // }
+
+  return( 
+    <div className='users-list'>
+        <p> Name:{user.firstName} {user.lastName} </p>
+        <p>Age:{user.age}</p>
+      { user.isAdmin && <p>Gender:{user.gender}</p>}
+        <p>{user.isAdmin ? <p>I Am Admin</p>:<p>I am Not Admin</p>}</p>
+        <button className="btn-delete" onClick={
+          (user.onDeleteUser)
+        }>Delete</button>
     </div>
   )
 }

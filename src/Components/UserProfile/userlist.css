@@ -1,0 +1,24 @@
+.user-profile{
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.myButton{
+    background-color: rgb(94, 71, 195);
+    color: #fff;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+input{
+    margin: 5px;
+    padding: 10px;
+}
+.btn-delete{
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
