@@ -14,13 +14,18 @@ import { Button } from '@mui/material';
 import TodoList from './Components/Todos/TodoList';
 import UserProfile from './Components/UserProfile/UserProfile';
 import UserList from './Components/UserProfile/UserList';
+import FormExample from './Components/FormEx/FormExample';
+import FormikExample from './Components/Formik/FormikExample';
+import ReduxExample from './Components/Redux/ReduxExample';
+import Customhookexample from './Components/Custom-hook/Customhookexample';
+import { AuthenticatedComponenet } from './Components/HOCEXample/Hoc';
 
 
 function App() {
   const [name,setName]=useState("Shlok")
   return (
     <div className="App">
-      <div className='header'>React Navigation</div>
+      {/* <div className='header'>React Navigation</div> */}
       <div className='container-body'>
         <div className='sidebar'>
         <Link className='link' to={"/counter"}>Counter</Link><br/><br/>
@@ -31,10 +36,14 @@ function App() {
         <Link className='link' to={"/context"}>Context Example</Link><br/><br/>
         <Link className='link' to={"/useeffect"}>UseEffect</Link><br/><br/>
         <Link className='link' to={"/userlist"}>User Profile</Link><br/><br/>
-
-        {/* <Link className='link' to={"/imagecaresoul"}>Image Caresoul</Link> */}
-
+        <Link className='link' to={"/user-form"}>User Form</Link><br/><br/>
+        <Link className='link' to={"/formik"}>Formik Example</Link><br/><br/>
+        <Link className='link' to={"/redux-example"}>Redux Example</Link><br/><br/>
+        <Link className='link' to={"/custom-hook-example"}>Custom-hook</Link><br/><br/>
+        {/* <Link className='link' to={"/hoc"}>HOC-Example</Link><br/><br/> */}
         </div>
+
+       
         <div className='content'>
           <Routes>
             <Route path='/counter' element={<Counter/>}></Route>
@@ -46,10 +55,16 @@ function App() {
             <Route path='/context' element={<ContextExample/>}></Route>
             <Route path='/useeffect' element={<UseEffectExample/>}></Route>
             <Route path='/userlist' element={<UserList/>}></Route>
+            <Route path='/user-form' element={<FormExample/>}></Route>
+            <Route path='/formik' element={<FormikExample/>}></Route>
+            <Route path='/redux-example' element={<ReduxExample/>}></Route>
+            <Route path='/custom-hook-example' element={<Customhookexample/>}></Route>
+            {/* <Route path='/hoc' element={<AuthenticatedComponenet/>}></Route> */}
             <Route path='*' element={<div>This Url is not matched</div>}></Route>
           </Routes>
         </div>
       </div>
+      
      {/* <UserCrudWrapper/> */}
      {/* <ReduxStoreExample/> */}
      {/* <Counter/> */}
@@ -57,8 +72,12 @@ function App() {
      {/* <TicTacToe/> */}
      {/* <ImageCaresoul/> */}
    {/* <ContextExample/> */}
+   
    {/* <UseEffectExample name={name}></UseEffectExample><br/> */}
    {/* <Button  variant="contained" onClick={()=>setName(name+Math.random()*10)}>Change Prop</Button> */}
+   {/* <FormExample/> */}
+   {/* <FormikExample/> */}
+
     </div>
   );
 }

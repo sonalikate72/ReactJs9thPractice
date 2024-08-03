@@ -1,7 +1,4 @@
 .tictac-game-board{
-    /* border: 1px solid gray;
-    width: 200px;
-    height: 200px; */
     margin: 50px;
     display: grid;
     grid-template-columns: repeat(3,100px);

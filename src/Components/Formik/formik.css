@@ -1,0 +1,19 @@
+
+
+
+.formik-form{
+    border: 1px solid gray;
+  background-color: rgb(245, 237, 237);
+  width: fit-content;
+  margin-left: 280px;
+  padding: 30px;
+  
+}
+.Select-Input{
+    width: 190px !important;
+}
+.btn-formik{
+   padding: 12px;
+   background-color: blue;
+   color: #fff;
+}

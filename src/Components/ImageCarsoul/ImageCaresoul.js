@@ -1,3 +1,4 @@
+import { Button } from '@mui/material'
 import React, { useState } from 'react'
 
 const ImageCaresoul = () => {
@@ -26,11 +27,12 @@ const ImageCaresoul = () => {
             return <img src={imgurl} style={{width:"100px"}}></img>
       })
     } */}
-    <button onClick={onPrev}>Prev</button>
+    <Button onClick={onPrev} variant='contained'>Prev</Button><br/>
+    <br/>
     <div class="contain-carousel">
-    <img src={images[currentImage]} style={{width:"100px; position: fixed;"}}></img>
-    </div>
-    <button onClick={onNext}>Next</button>
+    <img src={images[currentImage]} style={{width:"800px",height:"250px"}}></img>
+    </div><br/><br/>
+    <Button onClick={onNext} variant='contained'>Next</Button>
     </div>
 
 
