@@ -19,16 +19,18 @@ import FormikExample from './Components/Formik/FormikExample';
 import ReduxExample from './Components/Redux/ReduxExample';
 import Customhookexample from './Components/Custom-hook/Customhookexample';
 import { AuthenticatedComponenet } from './Components/HOCEXample/Hoc';
+import Greeting from './Greeting';
 
 
 function App() {
   const [name,setName]=useState("Shlok")
   return (
     <div className="App">
-      {/* <div className='header'>React Navigation</div> */}
+      <div className='header'>React Navigation</div>
       <div className='container-body'>
         <div className='sidebar'>
         <Link className='link' to={"/counter"}>Counter</Link><br/><br/>
+        <Link className='link' to={"/greeting"}>Greeting</Link><br/><br/>
         <Link className='link' to={"/todoslist"}>Todos List</Link><br/><br/>
         <Link className='link' to={"/tic-tac-toe"}>Tic-Tac Game</Link><br/><br/>
         <Link className='link' to={"/usercrud/list"}>Users Crud</Link><br/><br/>
@@ -40,13 +42,14 @@ function App() {
         <Link className='link' to={"/formik"}>Formik Example</Link><br/><br/>
         <Link className='link' to={"/redux-example"}>Redux Example</Link><br/><br/>
         <Link className='link' to={"/custom-hook-example"}>Custom-hook</Link><br/><br/>
-        {/* <Link className='link' to={"/hoc"}>HOC-Example</Link><br/><br/> */}
+        <Link className='link' to={"/hoc"}>HOC-Example</Link><br/><br/>
         </div>
 
        
         <div className='content'>
           <Routes>
             <Route path='/counter' element={<Counter/>}></Route>
+            <Route path='/greeting' element={<Greeting name="Sonali" greeting="Hello"/>}></Route>
             <Route path='/todoslist' element={<TodoList/>}></Route>
             <Route path='/tic-tac-toe' element={<TicTacToe/>}></Route>
             <Route path='/usercrud/*' element={<UserCrudWrapper/>}></Route>
@@ -72,6 +75,7 @@ function App() {
      {/* <TicTacToe/> */}
      {/* <ImageCaresoul/> */}
    {/* <ContextExample/> */}
+   {/* <Greeting name="Sonali" greeting="Hello"/> */}
    
    {/* <UseEffectExample name={name}></UseEffectExample><br/> */}
    {/* <Button  variant="contained" onClick={()=>setName(name+Math.random()*10)}>Change Prop</Button> */}
